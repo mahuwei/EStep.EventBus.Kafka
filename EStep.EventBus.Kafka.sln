@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32228.430
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EStep.EventBus.Kafka", "EStep.EventBus.Kafka\EStep.EventBus.Kafka.csproj", "{97D8BB3F-9247-4FAF-A35E-F39421A6F61F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{247D3984-B4B0-4BA4-9859-E5F425A30DDA}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		NuGet.Config = NuGet.Config
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97D8BB3F-9247-4FAF-A35E-F39421A6F61F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97D8BB3F-9247-4FAF-A35E-F39421A6F61F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97D8BB3F-9247-4FAF-A35E-F39421A6F61F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97D8BB3F-9247-4FAF-A35E-F39421A6F61F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BF69831B-837B-48F8-84FC-36B8761823BE}
+	EndGlobalSection
+EndGlobal
