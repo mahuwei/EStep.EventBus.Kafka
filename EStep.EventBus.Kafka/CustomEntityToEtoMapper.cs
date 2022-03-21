@@ -1,8 +1,10 @@
+using System.Globalization;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Volo.Abp;
 using Volo.Abp.DependencyInjection;
 using Volo.Abp.Domain.Entities;
+using Volo.Abp.Domain.Entities.Auditing;
 using Volo.Abp.Domain.Entities.Events.Distributed;
 using Volo.Abp.DynamicProxy;
 using Volo.Abp.ObjectMapping;
@@ -32,7 +34,10 @@ public class CustomEntityToEtoMapper : IEntityToEtoMapper, ITransientDependency 
     var orDefault = Options.EtoMappings.GetOrDefault<Type, EtoMappingDictionaryItem>(type1);
     if (orDefault == null) {
       var keysAsString = entity.GetKeys().JoinAsString<object>(",");
-      return new CustomEntityEto(type1.FullName!, keysAsString, entityObj);
+      var root = (FullAuditedAggregateRoot<Guid>)entityObj;
+      var time = root.LastModificationTime ?? root.CreationTime;
+      return new CustomEntityEto($"{type1.FullName!}Dto", keysAsString,
+        time.ToString(CultureInfo.InvariantCulture));
     }
 
     using var scope = HybridServiceScopeFactory.CreateScope();
